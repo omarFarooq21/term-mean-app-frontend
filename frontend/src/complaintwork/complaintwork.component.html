@@ -1,1 +1,80 @@
-<p>complaintwork works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+    <!--here ng if check whether the user is maker or receiver and according to it show that it show that particular div -->       
+        <div *ngIf="show; else elseBlock">
+            <h1>Maker</h1>
+            <div class="row">
+                <div class="col">
+                  <div ngbDropdown class="d-inline-block">
+                    <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Departments</button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                      <button ngbDropdownItem>Electricity Dept</button>
+                      <button ngbDropdownItem>Water Dept</button>
+                      <button ngbDropdownItem>Gas Dept</button>
+                    </div>
+                  </div>
+                </div>
+        </div>
+        <ng-template #elseBlock>
+            <p>
+                <button type="button" class="btn btn-outline-primary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
+                  aria-controls="collapseExample">
+                  Electricity Complaints
+                </button>
+              </p>
+              <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+                <div class="card">
+                  <div class="card-body">
+                    Short circuit at house
+                  </div>
+                  <div class="card-body">
+                    Power off for 2 days
+                  </div>
+                  <div class="card-body">
+                    Meter broken
+                  </div>
+                </div>
+              </div>
+              <p>
+                <button type="button" class="btn btn-outline-primary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
+                  aria-controls="collapseExample">
+                  Water Complaints
+                </button>
+              </p>
+              <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+                <div class="card">
+                  <div class="card-body">
+                    No water in line
+                  </div>
+                  <div class="card-body">
+                    water cut off for 2 days
+                  </div>
+                  <div class="card-body">
+                    Pipe broken
+                  </div>
+                </div>
+              </div>
+              <p>
+                <button type="button" class="btn btn-outline-primary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
+                  aria-controls="collapseExample">
+                  Gas Complaints
+                </button>
+              </p>
+              <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+                <div class="card">
+                  <div class="card-body">
+                    Meter issue at house
+                  </div>
+                  <div class="card-body">
+                    Power off for 2 days
+                  </div>
+                  <div class="card-body">
+                    Meter broken
+                  </div>
+                </div>
+              </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
