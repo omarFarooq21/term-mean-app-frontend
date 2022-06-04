@@ -6,6 +6,7 @@ import { SignupComponent } from 'src/signup/signup.component';
 import { RouterModule, Routes} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NotfoundcomponentComponent } from 'src/notfoundcomponent/notfoundcomponent.component';
 
 
 
@@ -14,7 +15,8 @@ import { AppComponent } from './app.component';
     AppComponent,
     NavbarComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    NotfoundcomponentComponent
   ],
   imports: [
     BrowserModule,
