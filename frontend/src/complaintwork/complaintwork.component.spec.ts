@@ -1,23 +1,19 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  show : boolean;
 
-import { ComplaintworkComponent } from './complaintwork.component';
+  constructor(){
+    this.show = true;
+  }
+}
 
-describe('ComplaintworkComponent', () => {
-  let component: ComplaintworkComponent;
-  let fixture: ComponentFixture<ComplaintworkComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ComplaintworkComponent ]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(ComplaintworkComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+export class NgbdDropdownBasic {
+}
+export class NgbdCollapseBasic {
+  public isCollapsed = false;
+}
